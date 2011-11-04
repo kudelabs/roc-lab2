@@ -2,14 +2,11 @@
 
 <%= render 'form' %>
 
-
-
-
-<ul style="margin: 2em 0; padding: 0">
+<ul class="msg-list" >
 <% @messages.reverse.each do |message| %>
-  <li style="list-style-type: none; border-bottom: 1px solid #aaa; padding:0.5em">
+  <li>
 	<%= message.body %>
-	<div class="timestamp" style="text-align:right; font-size: 0.8em; color:#888">
+	<div class="timestamp">
 		<%=time_ago_in_words(message.created_at)%> ago
 	</div>
   </li>

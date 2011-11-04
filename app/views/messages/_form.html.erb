@@ -1,3 +1,4 @@
+<div class="form">
 <%= form_for(@message) do |f| %>
   <% if @message.errors.any? %>
     <div id="error_explanation">
@@ -13,9 +14,10 @@
 
   <div class="field">
     <%= f.label :body, "What's going on?" %><br />
-    <%= f.text_area :body, :rows=>"3", :style=>"width:100%"%>
+    <%= f.text_area :body, :rows=>"3"%>
   </div>
-  <div class="actions" style='text-align:right'>
+  <div class="actions">
     <%= f.submit "Send to the world" %>
   </div>
 <% end %>
+</div>

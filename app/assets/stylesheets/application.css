@@ -5,3 +5,12 @@
  *= require_self
  *= require_tree . 
 */
+
+div.frame {
+	width: 34em; 
+	margin: 2em auto;
+}
+
+h1 {
+	margin: 1em auto;
+}
