@@ -1,32 +1,13 @@
+Hi, Welcome to Rails on Campus.
 
-First, show running miniblog app
-Then:
-$ rm -rf miniblog
+This is the sample code from Lab #1. Hopefully you had a chance to work on this in class and have your own version. If not, feel free to download this and use it as a starting point for Lab #2.
 
-why!!!
-well, cause in about 20 min, i can have it back
- 
-$ rails new miniblog
+Topics covered in this Lab include:
 
-$ rails server
- + look at dir structure, app dir, config dir, public dir
- + edit public/index
-$ rails generate scaffold messages body:text
- + look at view, model, migration
-$ rake db:migrate
- + creates DB
-$ rails server
- + delete public/index.html, edit routes.rb
- + show scaffold
++ Making sure your Rails environment is properly set up.
++ Creating a new Rails project
++ Generating a model and scaffold
++ Basic HTML and CSS to build a working site web application 
 
-now, edit html: 
-+ delete extra stuff from index
-+ move new form to top of index
-+ redirect to index after create
-+ change table to ul, add a tiny bit of css so the list looks nice
-+ add some css so the textfield isn't so ugly
-+ add the timestamp to the list
+Rails on Campus is a program started by Leon Du and Shaokun Wu, 2 ruby developers in Guangzhou China. The idea is to build a good set of material for introduction courses that can be used to teach Rails on college campuses. In particular in Guangzhou, college students are often not exposed to newer technology, and the goal of this program is to introduce students to a new world of open source development frameworks. Not just Rails, but also things like Node.js or Python/Django.
 
-edit controller:
- 
- + show .xml .json

@@ -1,0 +1,32 @@
+
+First, show running miniblog app
+Then:
+$ rm -rf miniblog
+
+why!!!
+well, cause in about 20 min, i can have it back
+ 
+$ rails new miniblog
+
+$ rails server
+ + look at dir structure, app dir, config dir, public dir
+ + edit public/index
+$ rails generate scaffold messages body:text
+ + look at view, model, migration
+$ rake db:migrate
+ + creates DB
+$ rails server
+ + delete public/index.html, edit routes.rb
+ + show scaffold
+
+now, edit html: 
++ delete extra stuff from index
++ move new form to top of index
++ redirect to index after create
++ change table to ul, add a tiny bit of css so the list looks nice
++ add some css so the textfield isn't so ugly
++ add the timestamp to the list
+
+edit controller:
+ 
+ + show .xml .json
