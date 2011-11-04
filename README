@@ -5,7 +5,7 @@ This is the sample code from Lab #1. Hopefully you had a chance to work on this 
 Topics covered in this Lab include:
 
 + Making sure your Rails environment is properly set up
-+ Creating a new Rails project
++ Creating a new Rails application
 + Generating a model and scaffold
 + Basic HTML and CSS to build a working web application 
 
@@ -31,5 +31,11 @@ Additional resources:
 + [link to the slideshow]
 + http://guides.rubyonrails.org/getting_started.html
 
-Rails on Campus is a program started by Leon Du and Shaokun Wu, 2 ruby developers in Guangzhou China. The idea is to build a good set of material for introduction courses that can be used to teach Rails on college campuses. In particular in Guangzhou, college students are often not exposed to newer technology, and the goal of this program is to introduce students to a new world of open source development frameworks. Not just Rails, but also things like Node.js or Python/Django.
+
+Rails on Campus is a program started by Leon Du and Shaokun Wu, 2 ruby developers in Guangzhou, China. The idea is to build a good set of material for introduction courses that can be used to teach Rails on college campuses. In Guangzhou, and many other areas around the world, college students are often not exposed to newer technology, and are left to learn on the job. The goal of this program is to introduce students to a new world of open source development frameworks that are quite popular around the world. Not just Rails, but also things like Node.js or Python/Django. 
+
+Rails on Campus is sponsored by:
++ gzruby - The Guangzhou Ruby Group http://groups.google.com/group/gzruby
++ Kudelabs http://kudelabs.com
++ Beansmile http://beansmile.com 
 

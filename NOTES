@@ -4,7 +4,7 @@ Then:
 $ rm -rf miniblog
 
 why!!!
-well, cause in about 20 min, i can have it back
+well, cause in about 10 min, I can have it back
  
 $ rails new miniblog
 
@@ -20,7 +20,7 @@ $ rails server
  + show scaffold
 
 now, edit html: 
-+ delete extra stuff from index
++ delete extra links (show,destroy,edit) from index
 + move new form to top of index
 + redirect to index after create
 + change table to ul, add a tiny bit of css so the list looks nice
