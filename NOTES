@@ -1,4 +1,3 @@
-
 First, show running miniblog app
 Then:
 $ rm -rf miniblog
@@ -9,6 +8,7 @@ well, cause in about 10 min, I can have it back
 $ rails new miniblog
 
 $ rails server
+ + http://localhost:3000
  + look at dir structure, app dir, config dir, public dir
  + edit public/index
 $ rails generate scaffold messages body:text
