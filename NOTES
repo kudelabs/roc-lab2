@@ -1,32 +1,47 @@
-First, show running miniblog app
-Then:
-$ rm -rf miniblog
+- Getting started
+Start from your own version of roc-lab1, or get it from the repo:
+ git clone git@github.com:adevadeh/roc-lab2.git
 
-why!!!
-well, cause in about 10 min, I can have it back
- 
-$ rails new miniblog
-
-$ rails server
- + http://localhost:3000
- + look at dir structure, app dir, config dir, public dir
- + edit public/index
-$ rails generate scaffold messages body:text
- + look at view, model, migration
 $ rake db:migrate
- + creates DB
-$ rails server
- + delete public/index.html, edit routes.rb
- + show scaffold
 
-now, edit html: 
-+ delete extra links (show,destroy,edit) from index
-+ move new form to top of index
-+ redirect to index after create
-+ change table to ul, add a tiny bit of css so the list looks nice
-+ add some css so the textfield isn't so ugly
-+ add the timestamp to the list
+- create Messages#show
++ add link to messages#index
++ edit the show page, its ugly
 
-edit controller:
- 
- + show .xml .json
+"Hey, this looks empty, lets add some replies"
+
+
+$ rails g resource reply body:text message:references 
+
++ check reply migration
++ check reply.rb - see belongs_to
+
++ add :has_many relation to messages
+
+$ rake db:migrate
+
+- rails console - test drive the new model
+>msg = Message.new(:body=>"I am from the command line")
+>msg.save
+>Message.create(:body=>"This does an insert")
+>msg.replies.create(:body=>'Really?')
+>r = msg.replies.build(:body=>"Yes, it does!")
+>r.save
+>msg = Message.find(2)
+>msg.replies.collect(&:body)
+
++ add nested replies resource to routes.rb  
+
+$ rails s
+
+- edit messages#show
++ add replies count
++ add reply list
++ add reply form
++ add reply#create
+
+- Extra
++ timestamps
++ more console fun
+
+

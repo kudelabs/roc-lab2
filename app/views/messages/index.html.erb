@@ -1,11 +1,10 @@
-<h1>This is My Miniblog!</h1>
 
 <%= render 'form' %>
 
 <ul class="msg-list" >
 <% @messages.reverse.each do |message| %>
   <li>
-	<%= message.body %>
+	<%= link_to message.body, message %>
 	<div class="timestamp">
 		<%=time_ago_in_words(message.created_at)%> ago
 	</div>

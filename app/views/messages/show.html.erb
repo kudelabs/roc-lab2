@@ -1,10 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div style="margin-top: 4em;font-size: 1.2em;border: 1px solid #888; padding: 2em;margin-bottom: 2em">
+	<%= @message.body %>
+</div>
 
-<p>
-  <b>Body:</b>
-  <%= @message.body %>
-</p>
+<%= @message.replies.count%> replies
 
+<div>
+<%=form_for([@message,Reply.new(:message_id => @message.id)]) do |f| %>
+	Have something to say? <%=f.text_field(:body, :style=>"width: 100%")%>
+	<div style="text-align:right"><%= f.submit "Say It!"%></div>
+<%end%>	
+</div>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+<ul style="list-style-type: none;">
+<% @message.replies.reverse.each do |reply| %>
+	<li style="padding: 1em; border-bottom:1px solid #ccc"><%=reply.body%></li>
+<%end%>
+</ul>
+<%= link_to '<< Back to Messages', messages_path %>
