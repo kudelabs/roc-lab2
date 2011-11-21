@@ -19,12 +19,12 @@ it as a starting point for Lab #3.
 
 ### Instructions:
 
-+ download the code https://github.com/kudelabs/roc-lab2 either with git or as a zip file
-$ cd roc-lab2
-$ bundle install
-$ rake db:migrate
-$ rails server
-+ Goto http://localhost:3000
++ download the code <https://github.com/kudelabs/roc-lab2> either with git or as a zip file
+`$ cd roc-lab2`  
+`$ bundle install`  
+`$ rake db:migrate`  
+`$ rails server`  
++ Goto <http://localhost:3000>
 
 Be sure to see NOTES for more commands and tips.
 
@@ -46,6 +46,7 @@ of this program is to introduce students to the world of open source development
 frameworks to help prepare them for a good job.
 
 Rails on Campus is sponsored by:
+
 + gzruby - The Guangzhou Ruby Group http://groups.google.com/group/gzruby
 + Kudelabs http://kudelabs.com
 + Beansmile http://beansmile.com 
