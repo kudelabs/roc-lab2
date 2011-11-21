@@ -1,6 +1,6 @@
 - Getting started
 Start from your own version of roc-lab1, or get it from the repo:
- git clone git@github.com:adevadeh/roc-lab2.git
+ git clone git://github.com/kudelabs/roc-lab1.git
 
 $ rake db:migrate
 
