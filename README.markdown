@@ -19,7 +19,7 @@ it as a starting point for Lab #3.
 
 ### Instructions:
 
-+ download the code <https://github.com/kudelabs/roc-lab2> either with git or as a zip file
++ download the code <https://github.com/kudelabs/roc-lab2> either with git or as a zip file  
 `$ cd roc-lab2`  
 `$ bundle install`  
 `$ rake db:migrate`  
