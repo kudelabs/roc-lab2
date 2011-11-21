@@ -20,10 +20,10 @@ it as a starting point for Lab #3.
 ### Instructions:
 
 + download the code <https://github.com/kudelabs/roc-lab2> either with git or as a zip file  
->`$ cd roc-lab2`  
->`$ bundle install`  
->`$ rake db:migrate`  
->`$ rails server`  
+        $ cd roc-lab2  
+        $ bundle install  
+        $ rake db:migrate  
+        $ rails server  
 + Goto <http://localhost:3000>
 + Be sure to see NOTES for more commands and tips.
 
