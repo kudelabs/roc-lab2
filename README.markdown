@@ -1,6 +1,8 @@
 # Hi, Welcome to Rails on Campus.
 
-This is the sample code from Lab #2. Hopefully you had a chance to work on this in class and have your own version. If not, feel free to download this and use it as a starting point for Lab #3.
+This is the sample code from Lab #2. Hopefully you had a chance to work on this 
+in class and have your own version. If not, feel free to download this and use 
+it as a starting point for Lab #3.
 
 ### Topics covered in this Lab include:
 
@@ -36,7 +38,12 @@ Be sure to see NOTES for more commands and tips.
 
 ---
 
-Rails on Campus is a program started by Leon Du and Shaokun Wu, 2 ruby developers in Guangzhou, China. The idea is to build a good set of material for introduction courses that can be used to teach Rails on college campuses. In Guangzhou, and many other areas around the world, college students are often not exposed to newer technology, and are left to learn on the job. The goal of this program is to introduce students to a new world of open source development frameworks that are quite popular around the world. Not just Rails, but also things like Node.js or Python/Django. 
+Rails on Campus is a program started by Leon Du and Shaokun Wu, 2 ruby developers 
+in Guangzhou, China. The idea is to build a good set of material for introduction 
+courses that can be used to teach Rails on college campuses. College students are 
+often not exposed to newer technology, and are left to learn on the job. The goal 
+of this program is to introduce students to the world of open source development 
+frameworks to help prepare them for a good job.
 
 Rails on Campus is sponsored by:
 + gzruby - The Guangzhou Ruby Group http://groups.google.com/group/gzruby
