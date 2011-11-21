@@ -24,13 +24,17 @@ $ rake db:migrate
 $ rails server
 + Goto http://localhost:3000
 
+Be sure to see NOTES for more commands and tips.
+
 
 ### Additional resources:
 
-+ http://Railsinstaller.org
-+ https://github.com/downloads/kudelabs/roc-lab2/Rails%20on%20Campus%20-%20SCAU%20s2.pdf
-+ http://guides.rubyonrails.org/getting_started.html
++ Rails for Windows: http://Railsinstaller.org
++ Slides: https://github.com/downloads/kudelabs/roc-lab2/Rails%20on%20Campus%20-%20SCAU%20s2.pdf
++ Rails Documentation: http://guides.rubyonrails.org/getting_started.html
++ Lab #1: https://github.com/kudelabs/roc-lab1
 
+---
 
 Rails on Campus is a program started by Leon Du and Shaokun Wu, 2 ruby developers in Guangzhou, China. The idea is to build a good set of material for introduction courses that can be used to teach Rails on college campuses. In Guangzhou, and many other areas around the world, college students are often not exposed to newer technology, and are left to learn on the job. The goal of this program is to introduce students to a new world of open source development frameworks that are quite popular around the world. Not just Rails, but also things like Node.js or Python/Django. 
 
