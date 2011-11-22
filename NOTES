@@ -20,7 +20,9 @@ $ rails g resource reply body:text message:references
 
 $ rake db:migrate
 
-- rails console - test drive the new model
+- test drive the new model
+
+$ rails console
 >msg = Message.new(:body=>"I am from the command line")
 >msg.save
 >Message.create(:body=>"This does an insert")
