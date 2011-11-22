@@ -1,4 +1,4 @@
-source "http://gems.gzruby.org/"
+source "http://gems.gzruby.org/" # needed in China due to instable connection with rubygems.org - see website for more info
 
 gem 'rails', '3.1.1'
 
