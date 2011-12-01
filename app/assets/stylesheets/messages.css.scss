@@ -10,11 +10,25 @@ ul.msg-list {
 ul.msg-list li {
 	list-style-type: none; 
 	border-bottom: 1px solid #aaa; 
-	padding:0.5em;
+	padding: 1em 0 0 0;
+}
+
+.index div.message {
+	text-indent: 1em;
 }
 
 div.timestamp {
 	text-align:right; 
+	font-size: 0.8em; 
+	color:#888;
+}
+
+div.message_user {
+	color: #444;
+	font-size: 0.9em
+}
+
+div.reply_user {
 	font-size: 0.8em; 
 	color:#888;
 }
@@ -25,4 +39,31 @@ div.timestamp {
 
 .form div.actions {
 	text-align: right;
+}
+
+.message_body {
+	font-size: 1.2em;
+	border: 1px solid #888; 
+	padding: 2em;
+	margin-bottom: 2em;
+	background-color: #ccc;
+}
+
+.show ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-bottom: 2em
+}
+
+.show ul li {
+	padding: 1em 0 0 0; 
+}
+
+.show ul li div.reply_info {
+	border-top:1px solid #ccc;
+}
+
+.show ul li.reply_count {
+	border-bottom: 0;
 }

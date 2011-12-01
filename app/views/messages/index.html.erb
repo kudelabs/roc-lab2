@@ -1,10 +1,11 @@
-
+<div class="index">
 <%= render 'form' %>
 
 <ul class="msg-list" >
 <% @messages.reverse.each do |message| %>
   <li>
-	<%= link_to message.body, message %>
+	<div class='message_user'>Somebody said:</div>
+	<div class="message"><%= link_to message.body, message %></div>
 	<div class="timestamp">
 		<%=time_ago_in_words(message.created_at)%> ago
 	</div>
@@ -12,4 +13,4 @@
 <% end %>
 </ul>
 
-<br />
+</div>
