@@ -1,17 +1,19 @@
 - Getting started
-Start from your own version of roc-lab1, or get it from the repo:
- git clone git://github.com/kudelabs/roc-lab1.git
+Start from your own version of roc-lab2, or get it from the repo:
+ git clone git://github.com/kudelabs/roc-lab2.git
 
 $ rake db:migrate
 
-- create Messages#show
-+ add link to messages#index
-+ edit the show page, its ugly
+- create User model, add relations to Messsages and Replies.
 
-"Hey, this looks empty, lets add some replies"
+$ rails generate model users name:string email:string  password:string
+in user model, add
+has_many :messages
+has_many :replies
+
+add to messages and replies: belongs_to :user
 
 
-$ rails g resource reply body:text message:references 
 
 + check reply migration
 + check reply.rb - see belongs_to
