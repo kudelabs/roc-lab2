@@ -1,30 +1,42 @@
-1.  rails generate model user name:string email:string  password:string
+DRAFT VERSION
+
+- Getting started
+Start from your own version of roc-lab1, or get it from the repo:
+ git clone git://github.com/kudelabs/roc-lab2.git
+
+$ rake db:migrate
+
+
+1.  add user model, add relationships to messages, and replies.
+
+$ rails generate model user name:string email:string  password:string
 
 2.  rails generate migration add_user_to_messages_and_replies
     add_column :messages, :user_id, :reference
     add_column :replies, :user_id, :reference
-
 
 add => has_many :messages, :replies
 add => belongs_to :user
 
 rake db:migrate
 
-3. edit views, replace someone say
-start server and then go to
 
-4. $rails console
+3. $rails console
 user = User.create(:name=>'adeh',:email=>"adeh@kudelabs.com",:password=>'test')
  msg = user.messages.create(:body=>'hellow haha')
 reply = msg.replies.create(:body=>"reply to myself")
 reply.user = user
 
-refresh your page!
 
-5.. rails generate controller users new
- rails generate controller sessions new
+4. edit views, replace placeholder "someone" to be real users
+start server and then go to see the effect from console.
 
-add   before_filter :require_logged_in
+
+5.  create user, sessions controllers
+$rails generate controller users new
+$rails generate controller sessions new
+
+add before_filter :require_logged_in
   helper_method :current_user, :logged_in?
 
 6. add routes:
