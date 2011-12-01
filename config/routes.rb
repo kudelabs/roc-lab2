@@ -1,5 +1,12 @@
 Miniblog::Application.routes.draw do
 
+  match 'login' => "sessions#new"
+  match 'logout' => "sessions#destroy"
+  match 'signup' => "users#new"
+  
+  resources :users
+  resources :sessions
+  
   resources :messages do
     resources :replies
   end

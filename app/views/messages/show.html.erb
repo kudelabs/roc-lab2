@@ -1,5 +1,5 @@
 <div class="show">
-<div class="username">Someone said:</div>
+<div class="username"><%=@message.user%> said:</div>
 <div class="message_body">
 	<%= @message.body %>
 </div>
@@ -19,7 +19,7 @@
 	<li >
 		<%=reply.body%>
 		<div class="reply_info">
-			<div class="reply_user" style="float:left; width: 44%"><%="Someone replied"%></div>
+			<div class="reply_user" style="float:left; width: 44%"><%=reply.user%></div>
 			<div class="timestamp" style="float:right; width: 50%"><%=time_ago_in_words(reply.created_at)%> ago</div>
 			<div style="clear:both"></div>
 		</div>

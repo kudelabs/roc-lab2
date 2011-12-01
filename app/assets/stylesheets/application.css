@@ -6,10 +6,28 @@
  *= require_tree . 
 */
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
 div.frame {
 	width: 34em; 
 	margin: 2em auto;
 }
+
+div.header{
+	background-color: #444;
+	text-align: right;
+	color: #ffc;
+	padding: 4px;
+	border-bottom: 1px solid #888;
+}
+
+div.header a, div.header a:visited {
+	color: #ffc;
+}
+
 
 h1 {
 	margin: 1em auto;

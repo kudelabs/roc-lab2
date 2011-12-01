@@ -1,0 +1,15 @@
+<h2> Login page (<%=link_to "Sign Up", new_user_path%>)</h2>
+<%=@errors%>
+
+<%=form_tag sessions_path do%>
+<p>
+  Name: <%=text_field_tag :name%>
+</p>
+
+<p>
+  Password: <%=password_field_tag :password%>
+</p>
+
+<%=submit_tag "Login"%>
+
+<%end%>

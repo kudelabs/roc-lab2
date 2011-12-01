@@ -7,9 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="header">
+	<span><%=link_to "Logout", logout_path if logged_in?%></span>
+	</div>
 
 	<div class="frame">
-		<h1>This is My Miniblog!</h1>
+		
+		<h1>This is <%=" #{current_user.name}'s " if logged_in?%>Miniblog!</h1>
 		<div class="content">
 			<%= yield %>
 		</div>
