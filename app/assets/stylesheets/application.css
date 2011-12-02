@@ -6,6 +6,12 @@
  *= require_tree . 
 */
 
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+}
+
 div.frame {
 	width: 34em; 
 	margin: 2em auto;
@@ -13,4 +19,17 @@ div.frame {
 
 h1 {
 	margin: 1em auto;
+}
+
+div.header{
+	background-color: #323232;
+	text-align: right;
+	color: #ffc;
+	padding: 4px 1em;
+	border-bottom: 1px solid #888;
+	font-style: Courier;
+}
+
+div.header a, div.header a:visited {
+	color: #ffc;
 }
