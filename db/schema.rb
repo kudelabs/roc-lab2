@@ -13,11 +13,22 @@
 
 ActiveRecord::Schema.define(:version => 20111201092928) do
 
-# Could not dump table "messages" because of following StandardError
-#   Unknown type 'reference' for column 'user_id'
+  create_table "messages", :force => true do |t|
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
-# Could not dump table "replies" because of following StandardError
-#   Unknown type 'reference' for column 'user_id'
+  create_table "replies", :force => true do |t|
+    t.text     "body"
+    t.integer  "message_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "replies", ["message_id"], :name => "index_replies_on_message_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
