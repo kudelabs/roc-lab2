@@ -1,19 +1,18 @@
-DRAFT VERSION
+# Hi, this is STEP BY STEP to make ROC-LAB3 from ROC-LAB2.
 
-- Getting started
-Start from your own version of roc-lab1, or get it from the repo:
+###  Getting started
+Start from your own version of roc-lab2, or get it from the repo:
  git clone git://github.com/kudelabs/roc-lab2.git
 
-$ rake db:migrate
 
-
-1.  add user model, add relationships to messages, and replies.
+### 1.  add user model, add relationships to messages, and replies.
 
 $ rails generate model user name:string email:string  password:string
 
-2.  rails generate migration add_user_to_messages_and_replies
-    add_column :messages, :user_id, :reference
-    add_column :replies, :user_id, :reference
+$ rails generate migration add_user_to_messages_and_replies
+  add following two lines to the newly created migration file:
+    add_column :messages, :user_id, :integer
+    add_column :replies, :user_id, :integer
 
 add => has_many :messages, :replies
 add => belongs_to :user
@@ -21,32 +20,31 @@ add => belongs_to :user
 rake db:migrate
 
 
-3. $rails console
-user = User.create(:name=>'adeh',:email=>"adeh@kudelabs.com",:password=>'test')
- msg = user.messages.create(:body=>'hellow haha')
-reply = msg.replies.create(:body=>"reply to myself")
-reply.user = user
+### 2. play with the new user in rails console
+$ rails console
+$ user = User.create(:name=>'adeh',:email=>"adeh@kudelabs.com",:password=>'test')
+$ msg = user.messages.create(:body=>'hellow haha')
+$ reply = msg.replies.create(:body=>"reply to myself")
+$ reply.user = user
+$ reply
 
-
-4. edit views, replace placeholder "someone" to be real users
+### 3. edit views, replace placeholder "someone" to be real users
 start server and then go to see the effect from console.
 
+### 4.  create user, sessions controllers
+$ rails generate controller users new
+$ rails generate controller sessions new
 
-5.  create user, sessions controllers
-$rails generate controller users new
-$rails generate controller sessions new
+and  add before_filter :require_logged_in
 
-add before_filter :require_logged_in
-  helper_method :current_user, :logged_in?
-
-6. add routes:
+### 5. add routes:
   match 'login' => "sessions#new"
   match 'logout' => "sessions#destroy"
   match 'signup' => "users#new"
 
-7.  finish up sessions#new, user#new and then sessions#destroy
+### 6.  finish up sessions#new, user#new and then sessions#destroy
 
-8. update message#create, reply#create to add user association.
+### 7. update message#create, reply#create to add user association.
 
 
 
