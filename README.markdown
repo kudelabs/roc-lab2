@@ -53,8 +53,8 @@ Rails on Campus is sponsored by:
 
 Rails on Campus的赞助团队有：
 
-gzruby - The Guangzhou Ruby Group <http://groups.google.com/group/gzruby>
-Kudelabs <http://kudelabs.com>
-Beansmile <http://beansmile.com>
-RoC Weibo <http://www.weibo.com/u/1944841390>
++ gzruby - The Guangzhou Ruby Group <http://groups.google.com/group/gzruby>
++ Kudelabs <http://kudelabs.com>
++ Beansmile <http://beansmile.com>
++ RoC Weibo <http://www.weibo.com/u/1944841390>
 
