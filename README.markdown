@@ -36,6 +36,7 @@ and use the NOTES to follow along.
 + Rails Documentation: http://guides.rubyonrails.org/getting_started.html
 + Lab #1: https://github.com/kudelabs/roc-lab1
 + Lab #2: https://github.com/kudelabs/roc-lab2
++ gzruby rubygems: http://gems.gzruby.org
 
 ---
 
