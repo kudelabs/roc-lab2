@@ -32,23 +32,29 @@ and use the NOTES to follow along.
 ### Additional resources:
 
 + Rails for Windows: http://Railsinstaller.org
-+ Slides: 
++ Slides: https://github.com/downloads/kudelabs/roc-lab3/Rails%20on%20Campus%20-%20SCAU%20#3.pdf
 + Rails Documentation: http://guides.rubyonrails.org/getting_started.html
 + Lab #1: https://github.com/kudelabs/roc-lab1
 + Lab #2: https://github.com/kudelabs/roc-lab2
 
 ---
 
-Rails on Campus is a program started by Leon Du and Shaokun Wu, 2 ruby developers 
-in Guangzhou, China. The idea is to build material for introductory
-courses that can be used to teach Rails on college campuses. College students are 
-often not exposed to newer technology, and are left to learn on the job. The goal 
-of this program is to introduce students to the world of open source development 
-frameworks to help prepare them for a good job.
+**Rails on Campus** is a program started by Leon Du and Shaokun Wu, 2 ruby developers in Guangzhou, China. 
+The idea is to build a good set of material for introduction courses that can be used to teach Rails 
+on college campuses. College students are often not exposed to the latest development techniques, 
+and are left to learn on the job. The goal of this program is to introduce students to the world of 
+open source development frameworks to help prepare them for a good job.
+
+Rails on Campus是由中国广州两位Ruby 开发者， Leon Du和Shaokun Wu 发起的。活动的初衷是为大学Rails的
+教学积淀一些有价值的学习材料。大学学生接触新技术的机会不十分多，而常常要上到工作岗位才开始学习。
+希望通过这次活动，可以为同学们带来更多开源的开发框架，以此为将来的好工作更好地准备自己。
 
 Rails on Campus is sponsored by:
 
-+ gzruby - The Guangzhou Ruby Group http://groups.google.com/group/gzruby
-+ Kudelabs http://kudelabs.com
-+ Beansmile http://beansmile.com 
+Rails on Campus的赞助团队有：
+
+gzruby - The Guangzhou Ruby Group <http://groups.google.com/group/gzruby>
+Kudelabs <http://kudelabs.com>
+Beansmile <http://beansmile.com>
+RoC Weibo <http://www.weibo.com/u/1944841390>
 
