@@ -1,4 +1,4 @@
-# Hi, this is STEP BY STEP to make ROC-LAB3 from ROC-LAB2.
+# Hi, these are STEP BY STEP instructions to make ROC-LAB3 from ROC-LAB2.
 
 ###  Getting started
 Start from your own version of roc-lab2, or get it from the repo:
@@ -26,7 +26,7 @@ Start from your own version of roc-lab2, or get it from the repo:
 
 ### 2. play with the new user in rails console
 + $ rails console
-+ $ user = User.create(:name=>'adeh',:email=>"adeh@kudelabs.com",:password=>'test')
++ $ user = User.create(:name=>'pengyou',:email=>"pengyouhao@railsinchina.com",:password=>'test')
 + $ msg = user.messages.create(:body=>'hellow haha')
 + $ reply = msg.replies.create(:body=>"reply to myself")
 + $ reply.user = user
