@@ -2,8 +2,13 @@ require 'test_helper'
 
 class MessagesControllerTest < ActionController::TestCase
   setup do
+    @user = users(:tyler)
     @message = messages(:one)
+    @message.user = @user
+    @message.save
+    session[:user_id] = @user
   end
+  
 
   test "should get index" do
     get :index
@@ -21,7 +26,7 @@ class MessagesControllerTest < ActionController::TestCase
       post :create, message: @message.attributes
     end
 
-    assert_redirected_to message_path(assigns(:message))
+    assert_redirected_to messages_path
   end
 
   test "should show message" do
