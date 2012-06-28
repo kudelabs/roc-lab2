@@ -1,4 +1,5 @@
 - Getting started
+
 Start from your own version of roc-lab1, or get it from the repo:
  git clone git://github.com/kudelabs/roc-lab1.git
 
@@ -6,10 +7,9 @@ $ rake db:migrate
 
 - create Messages#show
 + add link to messages#index
-+ edit the show page, its ugly
++ edit the show page, it's ugly
 
 "Hey, this looks empty, lets add some replies"
-
 
 $ rails g resource reply body:text message:references 
 
@@ -33,6 +33,10 @@ $ rails console
 >msg.replies.collect(&:body)
 
 + add nested replies resource to routes.rb  
+  
+  resources :messages do
+    resources :replies
+  end
 
 $ rails s
 

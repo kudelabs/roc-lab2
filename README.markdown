@@ -2,7 +2,11 @@
 
 This is the sample code from Lab #2. Hopefully you had a chance to work on this 
 in class and have your own version. If not, feel free to download this and use 
-it as a starting point for Lab #3.
+it as a starting point for Lab #3. 
+
+See the NOTES file for some tips on how to get from Lab #1
+to Lab #2. This code is meant to be used as a reference. If you get stuck
+come here and see how we did it.
 
 ### Topics covered in this Lab include:
 
@@ -46,7 +50,7 @@ frameworks to help prepare them for a good job.
 
 Rails on Campus is sponsored by:
 
-+ gzruby - The Guangzhou Ruby Group http://groups.google.com/group/gzruby
++ gzruby http://gzruby.org
 + Kudelabs http://kudelabs.com
 + Beansmile http://beansmile.com 
 
