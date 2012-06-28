@@ -2,20 +2,24 @@
 <html>
 <head>
   <title>Miniblog</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js" %>   
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="header">
-	<span><%=link_to "Logout", logout_path if logged_in?%></span>
-	</div>
-
-	<div class="frame">
-		
-		<h1>This is <%=" #{current_user.name}'s " if logged_in?%>Miniblog!</h1>
-		<div class="content">
+<div class="frame">
+	<h1>Ruby on rails: miniblog</h1>
+		<div class="page">
+			<div class="header">
+				<% if logged_in? %>
+				 Welcome! <strong><%= current_user.name%></strong>
+				 <%= link_to "Logout", logout_path %>
+				<% end %>
+			</div>
+			<div class="content">
+			<!--	<%#raise k%> -->
 			<%= yield %>
+			</div>
 		</div>
 	</div>
 </body>

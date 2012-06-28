@@ -1,17 +1,25 @@
-source "http://gems.gzruby.org/" # needed in China due to instable connection with rubygems.org - see website for more info
+source "http://rubygems.org" # needed in China due to instable connection with rubygems.org - see website for more info
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem "pg", :group => :production
-gem "sqlite3-ruby", :group => :development
+#gem 'sqlite3'
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails', '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -33,3 +41,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem 'minitest'

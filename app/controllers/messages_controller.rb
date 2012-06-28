@@ -18,38 +18,28 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @message }
     end
   end
 
-  # GET /messages/new
-  # GET /messages/new.json
-  def new
-    @message = Message.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @message }
-    end
-  end
-
-  # GET /messages/1/edit
-  def edit
-    @message = Message.find(params[:id])
-  end
 
   # POST /messages
   # POST /messages.json
   def create
     @message = Message.new(params[:message])
     @message.user = current_user
+
     respond_to do |format|
       if @message.save
-        format.html { redirect_to messages_path}
-        format.json { render json: @message, status: :created, location: @message }
+        format.html { redirect_to(messages_url) }
+        format.js                                     
       else
-        format.html { render action: "new" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+        format.html {
+          @messages = Message.all
+          render :action => "index"
+        }
+        format.js {
+          head :error
+        }
       end
     end
   end
@@ -62,13 +52,14 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.update_attributes(params[:message])
         format.html { redirect_to @message, notice: 'Message was successfully updated.' }
-        format.json { head :ok }
+        format.json { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
   end
+  
 
   # DELETE /messages/1
   # DELETE /messages/1.json
@@ -78,7 +69,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to messages_url }
-      format.json { head :ok }
+      format.json { head :no_content }
     end
   end
 end

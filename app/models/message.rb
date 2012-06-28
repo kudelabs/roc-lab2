@@ -1,7 +1,9 @@
 class Message < ActiveRecord::Base
-  has_many :replies
   belongs_to :user
-  # gives us message.replies
-  # note the automatic pluralization
-
+  attr_accessible :body
+  has_many :replies
+  validates_presence_of :user_id
+  
+  delegate :name, :email, :to => :user, :allow_nil => true
+  validates_length_of :body, :maximum => 140
 end

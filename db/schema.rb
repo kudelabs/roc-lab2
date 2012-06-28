@@ -11,30 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111201092928) do
+ActiveRecord::Schema.define(:version => 20120613062033) do
 
   create_table "messages", :force => true do |t|
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
+
+  add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
 
   create_table "replies", :force => true do |t|
     t.text     "body"
     t.integer  "message_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "replies", ["message_id"], :name => "index_replies_on_message_id"
+  add_index "replies", ["user_id"], :name => "index_replies_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
+    t.string   "email"
     t.string   "password"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

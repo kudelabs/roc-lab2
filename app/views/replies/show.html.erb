@@ -1,0 +1,16 @@
+<div class="show">
+	<div class="nav">
+		<%= link_to "All messages", messages_path %>
+	</div>
+	<div class="message">
+		<strong><%=@message.user.name %></strong>said:
+		<div class="message_body"><%= @message.body %></div>
+		<div class="destroy left"> 
+			<%= link_to "Delete this message", @message, :method => :delete,
+			    :confirm "There is no undo, please confirm" %>
+		</div>
+		<div class="timestamp right"><%=time_ago_in_words(@message.create_at)%>ago</div>
+		<div class="clear">&nbsp;</div>
+	</div>
+<%= render "replies/list", :msg => @message%>
+</div>

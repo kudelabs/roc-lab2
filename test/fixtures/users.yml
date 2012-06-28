@@ -9,3 +9,8 @@ two:
   name: MyString
   email: MyString
   password: MyString
+  
+tyler:
+  name: "abc"
+  email: "abc@sina.com"
+  password: "123"

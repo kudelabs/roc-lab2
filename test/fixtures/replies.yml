@@ -3,7 +3,9 @@
 one:
   body: MyText
   message: 
+  user: 
 
 two:
   body: MyText
   message: 
+  user: 

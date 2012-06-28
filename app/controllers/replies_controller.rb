@@ -1,11 +1,18 @@
 class RepliesController < ApplicationController
-
   def create
-    msg = Message.find(params[:message_id])
-    reply = msg.replies.build(params[:reply])
-    reply.user = current_user
-    reply.save    
-    redirect_to msg
+    @message = Message.find(params[:message_id])
+    rep = @message.replies.create(params[:reply])
+    rep.user = current_user
+    
+    respond_to do |format|
+      format.html {
+        if rep.save
+          err = nil
+        else
+          err = "Couldn't save reply, try again"
+        end
+        redirect_to(message_path(rep.message), :notice => err)
+      }
+    end
   end
-
 end

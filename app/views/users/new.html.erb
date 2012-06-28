@@ -1,20 +1,8 @@
-<h2> Signup page (<%=link_to "Login", new_session_path%>)</h2>
+<%=@errors%>
 
-<% if @user && @user.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this message from being saved:</h2>
-
-    <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-
-<%=form_for User.new do |f|%>
+<%=form_for @user do |f|%>
 <p>
-  Name: <%=f.text_field :name%>
+  Email: <%=f.text_field :email%>
 </p>
 
 <p>
@@ -25,6 +13,6 @@
   Confirmation: <%=f.password_field :password_confirmation%>
 </p>
 
-<%=submit_tag "Sign Up"%>
+<%=submit_tag "Sign Up"%> or <%=link_to "Login", new_session_path%>
 
 <%end%>

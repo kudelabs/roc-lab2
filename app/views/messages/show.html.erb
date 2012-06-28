@@ -1,31 +1,22 @@
 <div class="show">
-<div class="username"><%=@message.user%> said:</div>
-<div class="message_body">
-	<%= @message.body %>
+
+<div class="nav">
+  <%= link_to "&laquo; All Messages".html_safe, messages_path %>
 </div>
 
-<div>
-<%=form_for([@message,Reply.new(:message_id => @message.id)]) do |f| %>
-	Have something to say? <%=f.text_field(:body, :style=>"width: 100%")%>
-	<div style="text-align:right"><%= f.submit "Say It!"%></div>
-<%end%>	
+<div class="message">
+  <strong><%=@message.user.name%></strong> said:
+  <div class="message_body"><%= @message.body %></div>
+  <div class="destroy left">
+    <%= link_to 'Delete this message', @message, :method => :delete,
+      :confirm => 'There is no undo, please confirm.' %>
+  </div>
+  
+  <div class="timestamp right"><%=time_ago_in_words(@message.created_at)%> ago</div>
+  <div class="clear">&nbsp;</div>
 </div>
 
-<ul >
-	<li class="reply_count">
-		<strong><%= pluralize(@message.replies.count, 'reply')%></strong>
-	</li>
-<% @message.replies.reverse.each do |reply| %>
-	<li >
-		<%=reply.body%>
-		<div class="reply_info">
-			<div class="reply_user" style="float:left; width: 44%"><%=reply.user%></div>
-			<div class="timestamp" style="float:right; width: 50%"><%=time_ago_in_words(reply.created_at)%> ago</div>
-			<div style="clear:both"></div>
-		</div>
-	</li>
-<%end%>
-</ul>
-<%= link_to '<< Back to Messages', messages_path %>
+<%= render 'replies/list', :msg => @message%>
+
 
 </div>

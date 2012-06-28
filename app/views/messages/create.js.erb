@@ -1,0 +1,2 @@
+$('<%= escape_javascript(render(:partial => "message", :object => @message)) %>').hide().prependTo('#messages').slideDown();
+$('#message_body').val('');
